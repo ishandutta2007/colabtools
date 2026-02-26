@@ -582,6 +582,7 @@ class ColabInspector(oinspect.Inspector):
       if filename and (
           filename.endswith(('.py', '.py3', '.pyc'))
           or 'ipython-input-' in filename
+          or 'ipykernel_' in filename
       ):
         out['file'] = filename
 
