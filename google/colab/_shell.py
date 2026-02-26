@@ -91,7 +91,7 @@ class _ColabXCachingCompiler(compiler.XCachingCompiler):
     if code_name.endswith('.py'):
       path = pathlib.Path(code_name)
       pid = os.getpid()
-      code_name = f'/tmp/ipython-input-{pid}/{path.name}'
+      code_name = f'/tmp/ipykernel_{pid}/{path.name}'
     return code_name
 
 
